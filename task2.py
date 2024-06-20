@@ -20,3 +20,15 @@ total = 0
 gst = 0
 pst = 0
 
+x = len(prices)
+subtotal = 0
+for i in range(x):
+    subtotal = subtotal + prices[i]
+else:
+    gst = subtotal * 0.05
+    pst = subtotal * 0.07
+    total = subtotal + gst + pst
+    gst = round(gst, 2)
+    pst = round(pst, 2)
+    total = round(total, 2)
+print(f"subtotal: {subtotal}, gst: {gst}, pst: {pst}, total: {total}")
